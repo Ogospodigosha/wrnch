@@ -4,4 +4,21 @@
   background: rgba(255, 255, 255, 0.05);
   box-shadow: 0 0 5px rgba(2, 0, 96, 0.25);
   position: relative;
+  .items {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 32px;
+    .link {
+      margin-top: 40px;
+      cursor: pointer;
+    }
+  }
+  .item {
+    display: flex;
+    align-items: center;
+    .icon {
+      margin-right: 16px;
+    }
+  }
 }
