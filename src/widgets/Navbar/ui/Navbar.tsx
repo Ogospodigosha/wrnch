@@ -1,9 +1,9 @@
 import React from 'react';
-import {Link} from "react-router-dom";
 import {classNames} from "shared/lib/classNames/classNames";
 import cls from './Navbar.module.scss'
 import Logo from 'shared/assets/icons/logo.svg'
 import Person from 'shared/assets/icons/person.svg'
+import {Button, ThemeButton} from "shared/ui/Button/Button";
 
 
 interface NavbarProps {
