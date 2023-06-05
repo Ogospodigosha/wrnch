@@ -5,6 +5,7 @@
   box-shadow: 0 0 5px rgba(2, 0, 96, 0.25);
   position: relative;
   overflow: hidden;
+  overflow-y: auto;
   .items {
     margin-top: 25px;
     display: flex;
@@ -22,5 +23,12 @@
     .icon {
       margin-right: 16px;
     }
+  }
+  .arrow {
+    margin-left: 67px;
+    rotate: 180deg;
+  }
+  .open {
+    rotate: 0deg;
   }
 }

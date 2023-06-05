@@ -8,13 +8,19 @@ import Maps from 'shared/assets/icons/maps.svg'
 import Widgets from 'shared/assets/icons/vidgets.svg'
 import Settings from 'shared/assets/icons/settings.svg'
 import Exit from 'shared/assets/icons/exit.svg'
+import Arrow from 'shared/assets/icons/arrow.svg'
+import Profile from 'shared/assets/icons/profile.svg'
+import Control from 'shared/assets/icons/control.svg'
 import {AppLink} from "shared/ui/AppLink/AppLink";
+import {Accordion} from "shared/ui/Accordion/Accordion";
+import {useState} from "react";
 
 interface SidebarProps {
     className?: string
 }
 
 export const Sidebar = ({className}: SidebarProps) => {
+    const [open, setOpen] = useState(false)
     return (
         <div className={classNames(cls.Sidebar, {}, [className])}>
             <div className={cls.items}>
@@ -60,10 +66,29 @@ export const Sidebar = ({className}: SidebarProps) => {
                     </div>
                 </div>
                 <div className={cls.link}>
-                    <div className={cls.item}>
-                        <div className={cls.icon}><Settings/></div>
-                        <div>Настройки</div>
-                    </div>
+                    <Accordion first={
+                        <div style={{marginTop:'40px', paddingLeft:'48px'}}>
+                            <div className={cls.item}>
+                                <div className={cls.icon}><Profile/></div>
+                                <div>Настройки профиля</div>
+                            </div>
+                        </div>
+                    } open={open} setOpen={setOpen}
+                    second={
+                        <div style={{marginTop:'40px', paddingLeft:'48px'}}>
+                            <div className={cls.item}>
+                                <div className={cls.icon}><Control/></div>
+                                <div>Управление финансами</div>
+                            </div>
+                        </div>
+                    }
+                    >
+                        <div className={cls.item}>
+                            <div className={cls.icon}><Settings/></div>
+                            <div>Настройки</div>
+                            <div className={open ? `${cls.arrow} ${cls.open} ` : cls.arrow}><Arrow/></div>
+                        </div>
+                    </Accordion>
                 </div>
                 <div className={cls.link}>
                     <div className={cls.item}>
