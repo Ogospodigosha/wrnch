@@ -4,6 +4,7 @@
   background: rgba(255, 255, 255, 0.05);
   box-shadow: 0 0 5px rgba(2, 0, 96, 0.25);
   position: relative;
+  overflow: hidden;
   .items {
     margin-top: 25px;
     display: flex;
@@ -12,6 +13,7 @@
     .link {
       margin-top: 40px;
       cursor: pointer;
+      position: relative;
     }
   }
   .item {

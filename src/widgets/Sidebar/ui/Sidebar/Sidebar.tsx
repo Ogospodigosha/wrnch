@@ -20,10 +20,12 @@ export const Sidebar = ({className}: SidebarProps) => {
             <div className={cls.items}>
                 <div>Меню</div>
                 <div className={cls.link}>
-                    <div className={cls.item}>
-                        <div className={cls.icon}><Home/></div>
-                        <div>Главная</div>
-                    </div>
+                    <AppLink to={"/"}>
+                        <div className={cls.item}>
+                            <div className={cls.icon}><Home/></div>
+                            <div>Главная</div>
+                        </div>
+                    </AppLink>
                 </div>
                 <div className={cls.link}>
                     <AppLink to={"/address"}>
