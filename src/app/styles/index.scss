@@ -17,3 +17,12 @@
   overflow-y: auto;
   height: calc(100vh - var(--navbar-height));
 }
+.page-wrapper::-webkit-scrollbar {
+  width: 6px;
+  background-color: #fff;
+}
+.page-wrapper::-webkit-scrollbar-thumb {
+  background-color: var(--navbar-color);
+  border-radius: 5px;
+  height:7px
+}

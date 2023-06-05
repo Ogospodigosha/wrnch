@@ -1,0 +1,16 @@
+.search * {
+  fill: white;
+}
+.find {
+  font: var(--font-l);
+  font-weight: 700;
+}
+.AddressForm {
+  display: flex;
+  justify-content: space-between;
+  .inpt {
+    flex: 1 1 auto;
+    width: 0;
+    margin-right: 24px;
+  }
+}
