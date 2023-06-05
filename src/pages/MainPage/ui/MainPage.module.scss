@@ -1,0 +1,24 @@
+.news {
+  font: var(--font-l);
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+.update {
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+.newsWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  .paragraph {
+    font:var(--font-m);
+    color: var(--secondary-color);
+    font-weight: 500;
+    .link {
+      text-decoration-line: underline;
+      color: #002BC5;
+    }
+  }
+
+}

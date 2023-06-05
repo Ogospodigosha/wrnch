@@ -1,6 +1,7 @@
 .Sidebar {
   height: calc(100vh - var(--navbar-height));
   width: 300px;
+  flex-shrink: 0;
   background: rgba(255, 255, 255, 0.05);
   box-shadow: 0 0 5px rgba(2, 0, 96, 0.25);
   position: relative;
