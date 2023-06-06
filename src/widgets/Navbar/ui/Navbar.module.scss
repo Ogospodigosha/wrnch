@@ -6,28 +6,94 @@
   align-items: center;
   justify-content: space-between;
   padding: 16px 32px;
+  z-index: 50;
 
   .logoBlock {
     display: flex;
     align-items: center;
+
     .logo {
       margin-right: 24px;
     }
   }
+
   .personBlock {
     display: flex;
     align-items: center;
+
     .person {
       margin-right: 16px;
     }
   }
+
   .title {
     color: var(--accent-color);
     font-weight: 700;
   }
 }
 
+.burger {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  cursor: pointer;
+  margin-right: 25px;
+  display: none;
+  span {
+    position: absolute;
+    top:9px;
+    width: 30px;
+    background-color: #fff;
+    height: 3px;
+
+  }
+}
+
+.burger::before {
+  content: '';
+  position: absolute;
+  top:0;
+  width: 30px;
+  background-color: #fff;
+  height: 3px;
+}
+
+.burger::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 30px;
+  background-color: #fff;
+  height: 3px;
+}
 
 
+@media (max-width: 999px) {
+  .Navbar {
+    position: relative;
+    padding: 16px 16px;
+  }
+}
+@media  (max-width: 768px) {
+  .logo {
+    margin-right: 16px;
+  }
+}
 
+@media (max-width: 768px) {
+  .title {
+    font-size: 16px;
+  }
+}
+@media (max-width: 499px) {
+  .title {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+ .burger{
+   display: block;
+   margin-right: 25px;
+ }
+}
 

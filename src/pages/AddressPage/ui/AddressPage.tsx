@@ -6,7 +6,9 @@ const AddressPage = () => {
         <div>
            <div className={cls.title}>Поиск адресов</div>
             <div className={cls.address}>Введите интересующий вас адрес</div>
-            <AddressForm/>
+            <div className={cls.form}>
+                <AddressForm/>
+            </div>
         </div>
     );
 };

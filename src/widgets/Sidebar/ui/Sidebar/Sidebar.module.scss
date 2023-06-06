@@ -7,29 +7,68 @@
   position: relative;
   overflow: hidden;
   overflow-y: auto;
+
   .items {
     margin-top: 25px;
     display: flex;
     flex-direction: column;
     margin-left: 32px;
+    transition: all 0.4s;
+
     .link {
       margin-top: 40px;
       cursor: pointer;
       position: relative;
     }
   }
+
   .item {
     display: flex;
     align-items: center;
+
     .icon {
       margin-right: 16px;
     }
   }
+
   .arrow {
     margin-left: 67px;
     rotate: 180deg;
   }
+
   .open {
     rotate: 0deg;
   }
 }
+
+.Sidebar.active {
+  transform: translateX(0);
+  height: calc(100vh - var(--navbar-height));
+  top: auto;
+}
+
+@media (max-width: 768px) {
+  .Sidebar {
+    transform: translateX(-130%);
+    transition: all 0.2s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    z-index: 1;
+  }
+}
+
+@media (max-width: 499px) {
+  .Sidebar {
+    transform: translateX(-130%);
+    transition: all 0.2s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    z-index: 1;
+    width: 100%
+  }
+}
+
